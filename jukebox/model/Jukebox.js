@@ -1,10 +1,9 @@
 const mongoose = require('../db/connection');
 
 const JukeboxSchema = new mongoose.Schema({
-    id: { type: Number },
-    artist: { type: String, required: true },
-    name: { type: String, required: true },
-    url: { type: String, required: true }
+    artist: String,
+    name: String,
+    url: String
 });
 
 const Jukebox = mongoose.model('Jukebox', JukeboxSchema);
