@@ -13,10 +13,11 @@ function App() {
     }, []);
 
     function getSongs() {
-        fetch(songs)
+        fetch('./seeds.json')
             .then(response => response.json())
             .then(response => {
-                setSongs(response.data.json);
+                setSongs(response);
+                console.log(response);
             })
             .catch(console.error);
     }
@@ -24,7 +25,7 @@ function App() {
     return (
         <div>
             <h1>Jukebox</h1>
-            <Results />
+            <Results songs={songs} />
         </div>
     )
 }
