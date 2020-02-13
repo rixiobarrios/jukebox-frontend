@@ -8,11 +8,11 @@ const Results = ({ songs }) => {
     return (
         <div className='songlist'>
             <ul>
-            {songs.map((songs, i) => 
-                <li key={i}>
-                    <li>{songs.artist} </li>
-                    <li>{songs.name}</li>
-                    <a href={songs.url} target="_blank" rel="noopener noreferrer">See Official Video Here</a>
+            {songs.map((song) => 
+                <li key={song._id}>
+                    <h3>{song.artist} </h3>
+                    <h4>{song.name}</h4>
+                    <a href={song.url} target="_blank" rel="noopener noreferrer">See Official Video Here</a>
                 </li>
                     // {songs.artist}
                     // {songs.name} 

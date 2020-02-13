@@ -1,0 +1,17 @@
+<div>
+    <h1>Jukebox</h1>
+    <p>Post you songs here</p>
+
+    <ul>
+        {{#each posts}}
+        <li>
+            <h2>{{this.song}}</h2>
+            <p>{{post}}</p>
+            <a href="post/{{this._id}}">View</a>
+            <a href="post/{{this._id}}/edit">Edit</a>
+        </li>
+        {{/each}}
+    </ul>
+
+    <a href="post/new">New</a>
+</div>

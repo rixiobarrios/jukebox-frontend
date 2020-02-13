@@ -1,0 +1,20 @@
+<h2>Edit Song:</h2>
+<form action="/post/{{_id}}?_method=put">
+    <p>
+        <label>Title:</label>
+        <input type="text" value="{{title}}" name="title" />
+        <label>Song</label>
+        <input type="text" value="{{post}}" name="post" />
+        <label>Edited</label>
+        {{#if edited}}
+        <input type="checkbox" name="edited" />
+        {{else}}
+        <input type="checkbox" name="edited" />
+        {{/if}}
+        <input type="submit" value="Edited" />
+    </p>
+</form>
+
+<form action="/post/{{_id}}?_method=delete" method="post">
+        <input type="submit" value="Remove" />
+</form>
